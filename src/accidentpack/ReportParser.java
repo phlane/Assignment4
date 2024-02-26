@@ -124,9 +124,4 @@ class ReportParser {
             return isTrue;
         }
     }
-    
-    public static String getState(String[] line) {
-    	return line[7];
-    }
-
 }

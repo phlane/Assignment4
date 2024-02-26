@@ -1,17 +1,21 @@
 package accidentpack;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoField;
 
 /**
  * This class provides an object for storing reports.
  *
  * @author Charles Winkelman
  */
-class Report implements Comparable<Report>{
+class Report {
 
     private String id;
     private int severity;
     private LocalDateTime startTime;
+    private LocalDate date;
+    private int time;
     private LocalDateTime endTime;
     private String street;
     private String city;
@@ -58,6 +62,8 @@ class Report implements Comparable<Report>{
         this.weather     = weather;
         this.crossing    = crossing;
         this.timeOfDay   = timeOfDay;
+        
+        setDateAndTime();
     }
 
     /**
@@ -87,6 +93,13 @@ class Report implements Comparable<Report>{
         weather = fields[11];
         crossing = ReportParser.parseCSVBoolean(fields[12]);
         timeOfDay = fields[13];
+        
+        setDateAndTime();
+    }
+    
+    private void setDateAndTime() {
+    	date = startTime.toLocalDate();
+    	time = startTime.get(ChronoField.MINUTE_OF_DAY);
     }
 
 
@@ -141,16 +154,13 @@ class Report implements Comparable<Report>{
     public String getTimeOfDay() {
         return timeOfDay;
     }
-
-    /**
-     * Compares Reports based on visibility, in descending order
-     * @param o  Report to compare
-     *
-     * @return negative if greater than, zero if equal, positive if greater than
-     */
-    @Override
-    public int compareTo(Report o) {
-        return  (int) (-100 * (this.visibility - o.getVisibility()));
+    
+    public LocalDate getDate() {
+    	return date;
+    }
+    
+    public int getTime() {
+    	return time;
     }
 
     @Override

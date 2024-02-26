@@ -1,0 +1,6 @@
+ID,Severity,Start_Time,End_Time,Street,City,County,State,Temperature(F),Humidity(%),Visibility(mi),Weather_Condition,Crossing,Sunrise_Sunset
+a1,1,2022-09-08 06:32:03,2022-09-08 07:01:39,I-480 E,North Ridgeville,Stark,NC,58,93,10,Fair,False,Night
+a2,1,2022-09-08 06:29:31,2022-09-08 07:28:20,Brookshire Blvd,Charlotte,Stark,NC,69,84,10,Mostly Cloudy,True,Night
+b1,2,2022-09-07 06:27:10,2022-09-08 07:27:26,E Highway 25,Belleview,Stark,NC,73,96,10,Fair,True,Night
+b2,1,2022-09-07 05:22:57,2022-09-08 06:52:42,Atlantic Blvd NE,Alliance,Stark,NC,62,86,7,Mostly Cloudy,False,Night
+b3,4,2022-09-07 04:23:55,2022-09-08 07:08:23,Benson Rd,Garner,Stark,NC,71,93,10,Cloudy,False,Night
