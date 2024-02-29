@@ -1,0 +1,14 @@
+This program accepts a .CSV file of a specific format of accident records, creates a record of the reports, and simulates the 
+processing time of each day and  their corresponding reports.
+
+How To:
+1. The program accepts a command line argument of the desired file location of the CSV.
+2. When the program succesfully 
+
+
+Task Division:
+Charles constructed the majority of the new content for the program.
+Phil worked on the sorting, the main method, modified the simulateDay and run methods, and tweaked areas of the program.
+The work is not properly recorded as to who did what.
+
+Step 3 was not possible to recreate.

@@ -9,7 +9,7 @@ import java.time.temporal.ChronoField;
  *
  * @author Charles Winkelman
  */
-class Report implements Comparable<Report>{
+class Report {
 
     private String id;
     private int severity;
@@ -174,5 +174,7 @@ class Report implements Comparable<Report>{
     public String toString() {
         return String.format("%s %s %s %s %s vis: %.2f", id, street, city, county, state, visibility);
     }
+
+
 }
 
